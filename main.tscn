@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0ki4d73lka6f"]
+
+[ext_resource type="PackedScene" uid="uid://gcscqylct5jk" path="res://dino.tscn" id="1_5jijk"]
+[ext_resource type="PackedScene" uid="uid://cw1dak04jq164" path="res://platform.tscn" id="2_3jb5c"]
+
+[node name="Main" type="Node"]
+
+[node name="Dino" parent="." instance=ExtResource("1_5jijk")]
+position = Vector2(81, 25)
+
+[node name="Platform" parent="." instance=ExtResource("2_3jb5c")]
+position = Vector2(55, 48)

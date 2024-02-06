@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpwa237bd5q8v"]
+
+[ext_resource type="Texture2D" uid="uid://btf7bc1magg68" path="res://arts/bush.png" id="1_wcgma"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6lj"]
+size = Vector2(6, 6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trpw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wcgma")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bush" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(4.76837e-09, 2.38419e-08)
+shape = SubResource("RectangleShape2D_ow6lj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_trpw7")

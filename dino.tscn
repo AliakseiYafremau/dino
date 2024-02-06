@@ -1,8 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://gcscqylct5jk"]
+[gd_scene load_steps=8 format=3 uid="uid://gcscqylct5jk"]
 
+[ext_resource type="Script" path="res://dino.gd" id="1_6k5kv"]
 [ext_resource type="Texture2D" uid="uid://biqcmngamvm33" path="res://arts/dino_jump.png" id="1_tuyum"]
 [ext_resource type="Texture2D" uid="uid://dlrk7ihewolgc" path="res://arts/dino_walk1.png" id="2_u7yxm"]
 [ext_resource type="Texture2D" uid="uid://d3ew81afveq5v" path="res://arts/dino_walk2.png" id="3_k5gco"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p6fjk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2iulp"]
+size = Vector2(12, 11)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06y2q"]
 animations = [{
@@ -26,16 +32,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdff4"]
-size = Vector2(84, 76)
+[node name="Dino" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_p6fjk")
+script = ExtResource("1_6k5kv")
 
-[node name="Dino" type="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 2.7597e-07)
+shape = SubResource("RectangleShape2D_2iulp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_06y2q")
 animation = &"walk"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_tdff4")
