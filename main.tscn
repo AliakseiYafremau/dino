@@ -6,7 +6,13 @@
 [node name="Main" type="Node"]
 
 [node name="Dino" parent="." instance=ExtResource("1_5jijk")]
-position = Vector2(81, 25)
+position = Vector2(104, 61)
+scale = Vector2(10, 10)
 
 [node name="Platform" parent="." instance=ExtResource("2_3jb5c")]
-position = Vector2(55, 48)
+position = Vector2(303, 288)
+scale = Vector2(10, 10)
+
+[node name="Platform2" parent="." instance=ExtResource("2_3jb5c")]
+position = Vector2(199, 306)
+scale = Vector2(10, 10)
